@@ -1,0 +1,990 @@
+/*----------Common Styling------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/*---------------croll bar design starting---------------*/
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4CAF50; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Set the border-radius to make it rounded */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+/* For Firefox */
+scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+}
+
+scrollbar-thumb {
+    background-color: #4CAF50; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Set the border-radius to make it rounded */
+}
+
+scrollbar-track {
+    background-color: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+
+/*---------------croll bar design ending---------------*/
+
+:root{
+    --themeRed: #e43a47;
+    --grey: #efefef;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+}
+
+.sectionTitle {
+    width: 300px;
+    border-bottom: 3px solid var(--themeRed);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.sectionTitle::after {
+    display: inline-block;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: var(--themeRed);
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(75% - 7px);
+    transform: rotate(45deg) translate(50%, 50%);
+    border: 3px solid #ffff;
+}
+
+section {
+    padding: 100px 0;
+    position: relative;
+}
+
+/*----------------------------------------*/
+
+/*------------------Home------------------*/
+
+header {
+    width: 100%;
+    height: -95%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 2;
+}
+
+header .container {
+    height: -25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    padding: 15px 0;
+    height: 75px;
+}
+
+header .container .logo img {
+    height: 100%;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #ffff;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover{
+    background-color: var(--themeRed);
+}
+
+/*------------Drop Down------------*/
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: #ffffff;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 200px; /* Set a minimum width for the dropdown */
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*------------Drop Down------------*/
+
+.banner {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner {
+    text-align: center;
+}
+
+.banner h1 {
+    margin-top: 100px;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #ffff;
+    text-shadow: 0 0 2px #0000;
+    line-height: 3.5rem;
+    font-weight: 100;
+    padding: 0 15px;
+}
+
+.banner h1 span {
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1rem;
+    padding: 0 0px;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+.banner p {
+    color: #ffff;
+    width: 50%;
+    text-shadow: 0 0 2px #0000;
+    margin-top: 10px;
+}
+
+.banner button{
+    background-color: var(--themeRed);
+    border: 0;
+    outline: none;
+    color: #ffff;
+    padding: 10px 15px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+
+/*------------About Us Section------------*/
+#aboutSection{
+    background-color: #e9e4fd;
+}
+#aboutSection .cards {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutSection .cards > div {
+    width: 270px;
+    background-color: var(--grey);
+    padding: 35px;
+    color: #444;
+    text-align: center;
+    border-radius: 15px;
+    height: 215px;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+
+#aboutSection .cards > div:hover {
+    width: 270px;
+    margin-top: -20px;
+    border-color: var(--themeRed);
+    padding: 55px;
+    height: auto;
+}
+
+
+#aboutSection .cards > div .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#aboutSection .cards > div p {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#aboutSection .carrds > div button {
+    border: 1px solid var(--themeRed);
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#aboutSection .cards > div:hover button {
+    background-color: var(--themeRed);
+    color: #ffff;
+}
+
+#aboutSection .cards > div img {
+    width: 100%;
+    max-height: 180px; /* Adjust the max-height as needed */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#aboutSection .cards > div {
+    width: 270px;
+    background-color: var(--grey);
+    padding: 15px; /* Adjust the padding as needed */
+    color: #444;
+    text-align: center;
+    border-radius: 15px;
+    height: auto;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+
+#aboutSection .aboutBox {
+    background-color: #fff; /* Set your desired background color */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Adjust border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow with a slight transparency */
+}
+
+
+#aboutSection  h2.sectionTitle {
+    color: #333; /* Set your desired text color */
+}
+
+#aboutSection  p, ul {
+    margin-left: 50px;
+}
+
+#aboutSection {
+    border-radius: 15px; /* Adjust border-radius for rounded corners */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow with a slight transparency */
+    margin-bottom: 20px; /* Add margin as needed */
+}
+
+#aboutSection .container {
+    background-color: #ffffff; /* Set your desired background color for the content */
+    border-radius: 10px; /* Adjust border-radius for rounded corners */
+    padding: 10px; /* Adjust padding as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow with a slight transparency */
+}
+
+#aboutSection .sectionTitle {
+    text-align: center; /* Center the text */
+}
+/*------------About Us Section Ending------------*/
+
+
+/*------------program section start------------*/
+
+.programs {
+    background-color: #e2e2e2;
+}
+
+.programs .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.programs .boxContainer .box {
+    width: 110%;
+    background-color: #ffff;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.programs .boxContainer .box .cardImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.programs .boxContainer .box .cardImage:after {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.9s;
+}
+
+.programs .boxContainer .box:nth-child(1) .cardImage,
+.programs .boxContainer .box:nth-child(1) .cardImage:after {
+    background-image: url("../images/programs/1.jpg");
+}
+
+.programs .boxContainer .box:nth-child(2) .cardImage,
+.programs .boxContainer .box:nth-child(2) .cardImage:after {
+    background-image: url("../images/programs/2.jpg");
+}
+
+.programs .boxContainer .box:nth-child(3) .cardImage,
+.programs .boxContainer .box:nth-child(3) .cardImage:after {
+    background-image: url("../images/programs/3.jpg");
+}
+
+.programs .boxContainer .box:nth-child(4) .cardImage,
+.programs .boxContainer .box:nth-child(4) .cardImage:after {
+    background-image: url("../images/programs/4.jpg");
+}
+
+.programs .boxContainer .box:hover .cardImage:after{
+    top: 100%;
+}
+
+.programs .boxContainer .box .programTitle {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.programs .boxContainer .box .donationCount {
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    margin-top: 10px;
+}
+
+.programs .boxContainer .box .donationCount span {
+    color: var(--themeRed);
+}
+
+.programs .boxContainer .box button {
+    position: absolute;
+    left: 50%;
+    background-color: var(--themeRed);
+    color: #ffff;
+    transform: translate(-50%);
+    bottom: -15px;
+    border-radius: 60px;
+    padding: 7px 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+/*------------ Education Section Start ------------*/
+.education {
+    background: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education video {
+    margin-top: 50px;
+    width: 75%; /* Decrease width by 25% */
+    height: 75vh; /* Decrease height by 25% */
+    object-fit: cover;
+    border-radius: 15px; /* Add border-radius for a rounded appearance */
+    transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+
+.education:hover video {
+    transform: scale(1.05); /* Increase scale on hover for a charming effect */
+}
+
+.education::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to control darkness */
+}
+
+.education .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Place it above the video overlay */
+}
+
+.education .sectionTitle {
+    margin-top: -300px;
+}
+
+/*------------ Education Section End ------------*/
+
+/*---------gallery start here-----------*/
+
+.gallery .galleryContainer {
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.gallery .galleryContainer .item {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.gallery .galleryContainer img{
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .title{
+    position: absolute;
+    background-color: var(--grey);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .item:hover .title {
+    opacity: 1;
+}
+
+.gallery .galleryContainer .item:hover img {
+    transform: scale(1.2);
+}
+
+/*---------gallery end here-----------*/
+
+#JoinUsSection {
+    padding: 100px 0;
+    background-color: var(--grey);
+}
+
+
+form {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+form h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* Additional Styles for Specific Elements */
+#dobMonth,
+#civilStatus {
+    width: calc(33.33% - 10px);
+}
+
+#dobYear,
+#dobDay {
+    width: calc(33.33% - 5px);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#photo {
+    margin-top: 10px;
+}
+
+
+/*--------------president details start here---------------*/
+.campus {
+    background-color: var(--grey);
+    width: 100%; /* Adjust width as needed */
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.row {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: space-between; /* Distribute items horizontally */
+}
+
+.campus-col {
+    flex-basis: 23%; /* Adjust flex-basis as needed */
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 100%;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+   /* background: rgba(26, 5, 65, 0.7); */
+    background: rgba(228, 58, 71, 0.7)
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+.layer p {
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover p {
+    bottom: 19%;
+    opacity: 1;
+}
+
+/*--------------president details end here---------------*/
+
+
+#historySection .history {
+    text-align: center;
+}
+
+#historySection .history p {
+    display: inline-block;
+    text-align: center; /* If you want the text content to be left-aligned within the centered <p> */
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+/*-----------key frames for scaleAnimations starting--------------*/
+@keyframes scaleAnimation {
+    from {
+        transform: scale(0.9);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#historySection .history {
+    text-align: center;
+    animation: scaleAnimation 0.8s ease-out;
+}
+
+
+/*-----------join footer section start here------------*/
+
+.join {
+    background-image: url("../images/pattern.jpg");
+    color: #fff;
+}
+
+.join .joinTitle {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.join .joinTitle span {
+    font-weight: 800;
+}
+
+.join button {
+    padding: 7px 15px;
+    margin-top: 20px;
+    border: 0;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.join button .joinNow {
+    margin-right: 10px;
+    background-color: #424242;
+    color: #fff;
+}
+
+.join button.adoptBtn{
+    background-color: var(--grey);
+}
+/*-----------join footer section end here--------------*/
+
+
+
+/*-----------footer section start here--------------*/
+
+footer{
+    background-color: #181818;
+    color: #7f7f7f;
+    padding: 50px;
+    font-size: 14px;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+footer .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+    padding: 0 0 5px 0;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .linksContainer ul{
+    list-style-type: none;
+}
+
+footer .linksContainer ul li a{
+    text-decoration: none;
+    color: #7f7f7f;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .newsLetterContainer img {
+    height: 40px;
+    margin-bottom: 11px;
+}
+
+footer .newsLetterContainer input {
+    background-color: transparent;
+    border: 1px solid #7f7f7f;
+    outline: none;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 10px;
+    color: #ccc;
+    border-radius: 30px;
+}
+
+/*-----------footer section end here--------------*/
+
+
+
+/*-----------ending--------------*/
+/*-----------ending--------------*/
+/*-----------ending--------------*/
+/*-----------ending--------------*/
+/*-----------ending--------------*/
+/*-----------ending--------------*/
+
+/*----------------Responsive Code start from here----------------*/
+
+@media screen and (max-width: 1140px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .education .videoPlayer{
+        width: 1280px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .banner h1 {
+        margin-top: 200px;
+    }
+    #aboutSection .cards {
+        justify-content: space-between;
+        height: auto;
+    }
+    #aboutSection .cards > div {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .banner {
+        background-position-x: 45%;
+    }
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    .programs .boxContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header nav {
+        position: relative;
+        border: 2px solid #fff;
+        height: 30px;
+        width: 30px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    header nav:after{
+        top: 17px;
+    }
+    header nav:before{
+        top: 7px;
+    }
+
+    header nav:after, header nav:before {
+        content: "";
+        height: 2px;
+        width: 17px;
+        background-color: #fff;
+        display: block;
+        position: absolute;
+        left: 5px;
+    }
+    header nav ul{
+        position: absolute;
+        right: -400px;
+        top: 53px;
+        transition: 0.5s;
+    }
+    header nav:hover ul {
+        right: 0;
+    }
+    header nav ul li {
+        display: block;
+    }
+    header nav ul li a {
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+    .banner {
+        background-position-x: 65%;
+    }
+    .banner p {
+        font-size: 14px;
+    }
+    .banner p,
+    .banner h1 {
+        width: 70%;
+    }
+    #aboutSection .cards > div:hover {
+        width: 350px;
+    }
+    .education .educationContainer{
+        width: 96%;
+    }
+    .education .educationContainer h3{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .education .educationContainer p{
+        margin: 10px 0 20px;
+    }
+    .gallery .galleryContainer{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .banner h1{
+        margin-top: 150px;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .banner button {
+        margin-bottom: 10px;
+    }
+    #aboutSection p{
+        text-align: justify;
+    }
+    #aboutSection .cards > div:hover{
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+    .programs .boxContainer {
+        grid-template-columns: 1fr;
+    }
+    .education .videoPlayer {
+        width: 1400px;
+    }
+    .education .educationContainer {
+        width: 93%;
+    }
+    .gallery .galleryContainer{
+        column-count: 1;
+    }
+    footer .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .education .educationContainer h3{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .banner h1{
+        margin-top: 100px;
+    }
+}
+
+/*----------------Responsive Code start from here----------------*/
